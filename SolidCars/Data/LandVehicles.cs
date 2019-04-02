@@ -10,7 +10,11 @@ namespace SolidCars.Data
 
         public LandVehicles()
         {
-            _LandVehicles = new List<IVehicle>();
+            _LandVehicles = new List<IVehicle>()
+            {
+                new Motorcycle(),
+                new Sedan()
+            };
         }
     }
 }

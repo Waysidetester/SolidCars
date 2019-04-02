@@ -1,41 +1,23 @@
-﻿using System.Linq;
-using System.Collections.Generic;
-using SolidCars.Data;
-using SolidCars;
-using System;
+﻿using System;
+using SolidCars.Vehicles;
 
 public class Program
 {
     public static void Main()
     {
-        var sky = new AirVehicles();
-        var ground = new LandVehicles();
-        var sea = new WaterVehicles();
+        var vehicles = new Vechiles();
 
-
-        var x = new Cessna();
-        sky._AirVehicles.Add(x);
-        sky._AirVehicles.Add(new Helicopter());
-
-        ground._LandVehicles.Add(new Motorcycle());
-        ground._LandVehicles.Add(new Sedan());
-
-        sea._WaterVehicles.Add(new JetSki());
-        sea._WaterVehicles.Add(new SpeedBoat());
-        // With a single `foreach`, have each vehicle Fly()
-        foreach (var airVeh in sky._AirVehicles)
+        foreach (var airVeh in vehicles.SkyVehicles)
         {
             airVeh.Fly();
         }
 
-        // With a single `foreach`, have each road vehicle Drive()
-        foreach (var landVeh in ground._LandVehicles)
+        foreach (var landVeh in vehicles.LandVehicles)
         {
             landVeh.Drive();
         }
 
-        // With a single `foreach`, have each water vehicle Drive()
-        foreach (var waterVeh in sea._WaterVehicles)
+        foreach (var waterVeh in vehicles.WaterVehicles)
         {
             waterVeh.Drive();
         }

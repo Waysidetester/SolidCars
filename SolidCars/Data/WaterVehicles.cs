@@ -10,7 +10,11 @@ namespace SolidCars.Data
 
         public WaterVehicles()
         {
-            _WaterVehicles = new List<IVehicle>();
+            _WaterVehicles = new List<IVehicle>
+            {
+                new JetSki(),
+                new SpeedBoat()
+            };
         }
     }
 }

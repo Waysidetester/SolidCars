@@ -10,7 +10,11 @@ namespace SolidCars.Data
 
         public AirVehicles()
         {
-            _AirVehicles = new List<IVehicle>();
+            _AirVehicles = new List<IVehicle>()
+            {
+                new Cessna(),
+                new Helicopter()
+            };
         }
     }
 }
